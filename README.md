@@ -2,7 +2,7 @@
 
 ## Installation
 
-Head to the [release]() page to download the correct file for your platform.
+Head to the [release](https://github.com/adriancleung/not-boop/releases) page to download the correct installation file for your platform.
 
 ## Development
 
