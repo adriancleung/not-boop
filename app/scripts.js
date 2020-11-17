@@ -233,4 +233,4 @@ const SCRIPTS = [
   },
 ];
 
-export default SCRIPTS;
+module.exports = SCRIPTS;

@@ -3,7 +3,6 @@
   <head>
     <style>
       body {
-        /* -webkit-app-region: drag; */
         background-color: #0a0e14;
         font-family: "Roboto Mono";
       }
@@ -23,6 +22,17 @@
       </div>
     </div>
     <div class="textcontainer">
+      <div id="searchModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <input type="text" placeholder="Start typing..." id="searchText" class="search">
+          <div class="search-list">
+            <ul id="searchList">
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <textarea
         id="maintext"
         class="textdark"
@@ -30,7 +40,6 @@
       ></textarea>
     </div>
     <script>
-      // You can also require other files to run in this process
       require("./renderer.js");
     </script>
   </body>
