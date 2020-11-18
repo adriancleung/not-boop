@@ -1,7 +1,3 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
-
 const { dialog, getCurrentWindow } = require('electron').remote;
 const Fuse = require('fuse.js');
 const SCRIPTS = require('./scripts');
@@ -99,12 +95,22 @@ const transformText = () => {
 
 const openModal = () => {
   modal.style.display = 'block';
+  searchText.value = '';
+  clearList();
   searchText.focus();
 };
 
 const closeModal = () => {
   modal.style.display = 'none';
 };
+
+const clearList = () => {
+  let searchItems = document.getElementsByTagName('li');
+  for (let i = 0; i < searchItems.length; i++) {
+    searchItems[i].remove();
+    i--;
+  }
+}
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'complete') {
@@ -140,13 +146,9 @@ span.onclick = () => {
 };
 
 searchText.oninput = () => {
+  clearList();
   let results = fuse.search(searchText.value);
-  let searchItems = document.getElementsByTagName('li');
   let searchList = document.getElementById('searchList');
-  for (let i = 0; i < searchItems.length; i++) {
-    searchItems[i].remove();
-    i--;
-  }
 
   for (let i = 0; i < results.length; i++) {
     let item = document.createElement('li');

@@ -5,19 +5,20 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "postinstall": "install-app-deps",
-    "pack": "build --dir",
-    "dist": "build",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
     "electron-toolkit": "electron ./node_modules/electron-toolkit"
   },
   "build": {
     "appId": "com.adriancleung.notboop",
     "copyright": "Copyright © 2020 adriancleung",
-    "productName": "not-boop",
-    "electronVersion": "4.0.4",
+    "productName": "Not Boop",
+    "electronVersion": "11.0.1",
     "asar": true,
     "directories": {
-      "output": "dist"
+      "buildResources": "../build",
+      "output": "../dist"
     },
     "mac": {
       "target": [
@@ -28,7 +29,20 @@
           ]
         }
       ],
-      "category": "public.app-category.productivity"
+      "category": "public.app-category.developer-tools",
+      "icon": "../build/icon.icns"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "../build/icon.ico"
     }
   },
   "repository": "https://github.com/adriancleung/not-boop",
@@ -44,6 +58,7 @@
     "electron-builder": "^22.9.1"
   },
   "dependencies": {
+    "electron-is-dev": "^1.2.0",
     "electron-reload": "^1.5.0",
     "fuse.js": "^6.4.3"
   }
