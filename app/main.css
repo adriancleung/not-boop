@@ -1,19 +1,22 @@
 @font-face {
-  font-family: "Merriweather";
-  src: url("./fonts/Merriweather-Regular.ttf");
+  font-family: 'Merriweather';
+  src: url('./fonts/Merriweather-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Monaco";
-  src: url("./fonts/monaco.ttf")
+  font-family: 'Monaco';
+  src: url('./fonts/monaco.ttf');
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-* {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
-h1 {margin: 0 0 10px 0; font-weight: 600; line-height: 1.2;}
+h1 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
 
 html,
 body {
@@ -34,7 +37,7 @@ button:focus {
   display: block;
   position: fixed;
   height: 32px;
-  width: calc(100% - 2px); /*Compensate for body 1px border*/
+  width: calc(100% - 2px);
   background: #0a0e14;
 }
 
@@ -66,7 +69,8 @@ button:focus {
 #min-button {
   grid-column: 1;
 }
-#max-button, #restore-button {
+#max-button,
+#restore-button {
   grid-column: 2;
 }
 #close-button {
@@ -74,17 +78,17 @@ button:focus {
 }
 
 #window-controls .button:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 #window-controls .button:active {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #close-button:hover {
-  background: #E81123 !important;
+  background: #e81123 !important;
 }
 #close-button:active {
-  background: #F1707A !important;
+  background: #f1707a !important;
 }
 #close-button:active .icon {
   filter: invert(1);
@@ -116,8 +120,8 @@ button:focus {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   margin-top: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .textcontainer {
@@ -134,7 +138,7 @@ button:focus {
 .middark {
   text-align: center;
 
-  font-family: "Monaco";
+  font-family: 'Monaco';
   color: white;
 }
 
@@ -158,13 +162,13 @@ button:focus {
   color: #dddddd;
   background-color: #0a0e14;
   padding-bottom: 30px;
-  font-family: "Monaco";
+  font-family: 'Monaco';
   overflow-y: scroll;
 }
 
 .modal {
   display: none;
-  position: fixed; 
+  position: fixed;
   z-index: 1;
   padding-top: 100px;
   left: 0;
@@ -172,7 +176,6 @@ button:focus {
   width: 100%;
   max-height: 100%;
   overflow: auto;
-
 }
 
 .modal-content {
@@ -209,7 +212,7 @@ button:focus {
   -moz-box-shadow: none;
   box-shadow: none;
   resize: none;
-  font-family: "Monaco";
+  font-family: 'Monaco';
   overflow-y: scroll;
 }
 
@@ -232,7 +235,7 @@ button:focus {
   font-size: 16px;
   color: #dddddd;
   display: block;
-  font-family: "Monaco";
+  font-family: 'Monaco';
   border-radius: 10px;
 }
 

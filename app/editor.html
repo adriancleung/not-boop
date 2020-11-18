@@ -4,7 +4,7 @@
     <style>
       body {
         background-color: #0a0e14;
-        font-family: "Roboto Mono";
+        font-family: 'Roboto Mono';
       }
     </style>
     <meta charset="UTF-8" />
@@ -16,49 +16,101 @@
       <div id="drag-region">
         <div id="window-controls">
           <div class="button" id="min-button">
-            <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+            <img
+              class="icon"
+              srcset="
+                icons/min-w-10.png 1x,
+                icons/min-w-12.png 1.25x,
+                icons/min-w-15.png 1.5x,
+                icons/min-w-15.png 1.75x,
+                icons/min-w-20.png 2x,
+                icons/min-w-20.png 2.25x,
+                icons/min-w-24.png 2.5x,
+                icons/min-w-30.png 3x,
+                icons/min-w-30.png 3.5x
+              "
+              draggable="false"
+            />
           </div>
           <div class="button" id="max-button">
-            <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+            <img
+              class="icon"
+              srcset="
+                icons/max-w-10.png 1x,
+                icons/max-w-12.png 1.25x,
+                icons/max-w-15.png 1.5x,
+                icons/max-w-15.png 1.75x,
+                icons/max-w-20.png 2x,
+                icons/max-w-20.png 2.25x,
+                icons/max-w-24.png 2.5x,
+                icons/max-w-30.png 3x,
+                icons/max-w-30.png 3.5x
+              "
+              draggable="false"
+            />
           </div>
           <div class="button" id="restore-button">
-            <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+            <img
+              class="icon"
+              srcset="
+                icons/restore-w-10.png 1x,
+                icons/restore-w-12.png 1.25x,
+                icons/restore-w-15.png 1.5x,
+                icons/restore-w-15.png 1.75x,
+                icons/restore-w-20.png 2x,
+                icons/restore-w-20.png 2.25x,
+                icons/restore-w-24.png 2.5x,
+                icons/restore-w-30.png 3x,
+                icons/restore-w-30.png 3.5x
+              "
+              draggable="false"
+            />
           </div>
           <div class="button" id="close-button">
-            <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+            <img
+              class="icon"
+              srcset="
+                icons/close-w-10.png 1x,
+                icons/close-w-12.png 1.25x,
+                icons/close-w-15.png 1.5x,
+                icons/close-w-15.png 1.75x,
+                icons/close-w-20.png 2x,
+                icons/close-w-20.png 2.25x,
+                icons/close-w-24.png 2.5x,
+                icons/close-w-30.png 3x,
+                icons/close-w-30.png 3.5x
+              "
+              draggable="false"
+            />
           </div>
         </div>
       </div>
     </header>
     <div class="grid">
-      <div class="leftdark">
-      </div>
-      <div class="middark">
-        Not Boop
-      </div>
-      <div class="rightdark">
-      </div>
+      <div class="leftdark"></div>
+      <div class="middark">Not Boop</div>
+      <div class="rightdark"></div>
     </div>
     <div class="textcontainer">
       <div id="searchModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <input type="text" placeholder="Start typing..." id="searchText" class="search">
+          <input
+            type="text"
+            placeholder="Start typing..."
+            id="searchText"
+            class="search"
+          />
           <div class="search-list">
-            <ul id="searchList">
-            </ul>
+            <ul id="searchList"></ul>
           </div>
         </div>
       </div>
 
-      <textarea
-        id="maintext"
-        class="textdark"
-
-      ></textarea>
+      <textarea id="maintext" class="textdark"></textarea>
     </div>
     <script>
-      require("./renderer.js");
+      require('./renderer.js');
     </script>
   </body>
 </html>

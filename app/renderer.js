@@ -20,20 +20,20 @@ const options = {
 const fuse = new Fuse(SCRIPTS, options);
 
 const init = () => {
-  if (process.platform === "darwin") {
-    document.getElementById("titlebar").style.display = "none";
+  if (process.platform === 'darwin') {
+    document.getElementById('titlebar').style.display = 'none';
   }
-  document.getElementById('min-button').addEventListener("click", event => {
-      win.minimize();
+  document.getElementById('min-button').addEventListener('click', event => {
+    win.minimize();
   });
-  document.getElementById('max-button').addEventListener("click", event => {
-      win.maximize();
+  document.getElementById('max-button').addEventListener('click', event => {
+    win.maximize();
   });
-  document.getElementById('restore-button').addEventListener("click", event => {
-      win.unmaximize();
+  document.getElementById('restore-button').addEventListener('click', event => {
+    win.unmaximize();
   });
-  document.getElementById('close-button').addEventListener("click", event => {
-      win.close();
+  document.getElementById('close-button').addEventListener('click', event => {
+    win.close();
   });
 
   toggleMaxRestoreButtons();
@@ -43,11 +43,11 @@ const init = () => {
 
 const toggleMaxRestoreButtons = () => {
   if (win.isMaximized()) {
-      document.body.classList.add('maximized');
+    document.body.classList.add('maximized');
   } else {
-      document.body.classList.remove('maximized');
+    document.body.classList.remove('maximized');
   }
-}
+};
 
 const loadDependencies = () => {
   let dependencies = [
@@ -104,7 +104,7 @@ const openModal = () => {
 
 const closeModal = () => {
   modal.style.display = 'none';
-}
+};
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'complete') {
@@ -116,7 +116,7 @@ document.addEventListener('readystatechange', event => {
 
 window.onbeforeunload = () => {
   win.removeAllListeners();
-}
+};
 
 window.addEventListener('keydown', e => {
   if (process.platform === 'darwin') {
