@@ -41,8 +41,8 @@
   "author": "adriancleung",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^4.2.12",
-    "electron-builder": "^20.44.4"
+    "electron": "^11.0.1",
+    "electron-builder": "^22.9.1"
   },
   "dependencies": {
     "electron-reload": "^1.5.0",

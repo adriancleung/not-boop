@@ -16,13 +16,17 @@ function createWindow() {
     fullscreenable: true,
     minHeight: 600,
     minWidth: 800,
-    title: null,    
-
+    title: null,
+    transparent: true,
+    frame: false,
     titleBarStyle: 'hiddenInset',
     webPreferences: {
       nodeIntegration: true,
+      enableRemoteModule: true,
     },
   });
+
+  mainWindow.setMenuBarVisibility(false);
 
   // and load the index.html of the app.
   mainWindow.loadFile("editor.html");
