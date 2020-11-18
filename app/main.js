@@ -17,7 +17,6 @@ function createWindow() {
     minHeight: 600,
     minWidth: 800,
     title: null,
-    transparent: true,
     frame: false,
     titleBarStyle: 'hiddenInset',
     webPreferences: {
@@ -25,8 +24,6 @@ function createWindow() {
       enableRemoteModule: true,
     },
   });
-
-  mainWindow.setMenuBarVisibility(false);
 
   // and load the index.html of the app.
   mainWindow.loadFile("editor.html");

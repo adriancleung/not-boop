@@ -17,7 +17,6 @@
     "electronVersion": "4.0.4",
     "asar": true,
     "directories": {
-      "app": "/Users/adrian/GitHub/not-boop",
       "output": "dist"
     },
     "mac": {
