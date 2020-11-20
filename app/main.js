@@ -28,7 +28,7 @@ function createWindow() {
     mainWindow.webContents.openDevTools({ mode: 'undocked' });
   }
 
-  mainWindow.on('closed', function () {
+  mainWindow.on('close', function () {
     mainWindow = null;
   });
 
@@ -42,7 +42,7 @@ function createWindow() {
         },
         {
           label: 'Close',
-          role: 'hide',
+          role: 'close',
           accelerator: 'Cmd+W',
         },
         {
