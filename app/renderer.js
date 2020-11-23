@@ -4,6 +4,8 @@ const SCRIPTS = require('./scripts');
 const win = getCurrentWindow();
 const modal = document.getElementById('searchModal');
 const searchText = document.getElementById('searchText');
+const textInput = document.getElementById('maintext');
+const hint = document.getElementById('hint');
 const span = document.getElementsByClassName('close')[0];
 const options = {
   includeScore: true,
@@ -18,7 +20,9 @@ const fuse = new Fuse(SCRIPTS, options);
 const init = () => {
   if (process.platform === 'darwin') {
     document.getElementById('titlebar').style.display = 'none';
+    document.getElementById('hint').innerText = document.getElementById('hint').innerText.replace("Ctrl", "⌘");
   }
+
   document.getElementById('min-button').addEventListener('click', event => {
     win.minimize();
   });
@@ -143,6 +147,14 @@ window.addEventListener('keydown', e => {
 
 span.onclick = () => {
   closeModal();
+};
+
+textInput.oninput = () => {
+  if (textInput.value !== "") {
+    hint.style.display = 'none';
+  } else {
+    hint.style.display = 'flex';
+  }
 };
 
 searchText.oninput = () => {
